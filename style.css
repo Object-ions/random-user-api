@@ -2,10 +2,6 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: cadetblue;
-}
-/*
 .spinner {
   --frame: 1s;
 }
@@ -60,4 +56,4 @@ body {
   to {
     transform: rotate(359deg);
   }
-} */
+}
