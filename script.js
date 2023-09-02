@@ -1,7 +1,9 @@
 function fetchUser() {
+  showSpinner();
   fetch('https://randomuser.me/api')
   .then(response => response.json())
   .then(data => {
+    hideSpinner();
     displayUser(data.results[0]);
   });
 }
@@ -44,7 +46,18 @@ function displayUser(user) {
 
 }
 
+// Show Spinner
+function showSpinner() {
+  document.querySelector('.spinner').style.display = 'block';
+}
 
+// Hide Spinner
+function hideSpinner() {
+  document.querySelector('.spinner').style.display = 'none';
+}
+
+// Event Listeners
 document.querySelector('#generate').addEventListener('click', fetchUser);
 
+// IIFE
 fetchUser();
